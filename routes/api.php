@@ -7,9 +7,9 @@ use App\Http\Controllers\Api\studentController;
 /*Definicion de rutas: Route define rutas, cada ruta tiene un verbo HTTP Asociado */
 
 
-Route::get('/students', function (){
-    return 'Obteniendo lista de estudiantes';
-});
+Route::get('/students', [studentController::class, 'index']);
+    
+
 /*1° GET /Students:Esta ruta responde a las solicitudes 'GET' a la URL '/students. La funcion de devolución('callback')
 devuelve de la cadena obteniendo lista de estudiantes */
 
